@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Crack iOS7 Restrictions Passcode</title>
+<title>Recover iOS7 & iOS8 Restrictions Passcodes</title>
 <style>
 body,div,p,a,td,input {font-family: Arial, Helvetica, sans-serif; font-size: 10pt;}
 h1 {font-size: 14pt; text-align: center;}
@@ -17,7 +17,7 @@ h2 {font-size: 12pt; text-align: center;}
 iOS Restrictions Passcode Cracker<br>A JavaScript implementation using CryptoJS<br>http://code.google.com/p/crypto-js/
 </h1>
 <h2>
-Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But apparently this site works for iOS 8 as well as iOS 7! Thanks to you early adopters for letting me know!<br>
+Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But this site works for iOS 8 as well as iOS 7! Thanks to you early adopters for letting me know!<br>
   <br>Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
 	<br>who figured out the encryption scheme & a way to break it VERY FAST!
 	<br>This is a much slower way, but accessible by all through a simple webpage!
@@ -47,14 +47,13 @@ iOS7 encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite s
 <h4>Notes:</h4>
         If this site helps you or you have questions, let me know: <b><u>ios7hash (at) derson.us</u></b><br>
 	<br>You will need access to iOS backup files or a jailbroken device to find these keys.
-	<br>From the device you need this file: <b>com.apple.restrictionspassword.plist</b>
-        <br>You can also find this file in an unencrypted iTunes backup of your device.
+	<br>From a jailbroken device, you need this file: <b>com.apple.restrictionspassword.plist</b>
         <br>
-        <br>On Windows it can be found at: %AppData%\Apple Computer\MobileSync\Backup\xxxRandomxxx\
+        <br>On Windows or a Mac, the file can be found in an <i><u>unencrypted</u></i> iTunes backup of your device:
+        <br>On Windows, the file is located here: "%AppData%\Apple Computer\MobileSync\Backup\" xxxRandomxxx\
         <br>Mac: ~/Library/Application Support/MobileSync/Backup/  where the "~" represents your Home folder. 
         <br>-- note, if you don't see Library in your Home folder, hold Option and click the Go menu.
-        <br>
-        <br>The file name is: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
+        <br>The file you need has this crazy name: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
 	<br>Within that file, you should find text like this:
 <xmp>  <dict>
      <key>RestrictionsPasswordKey</key>
