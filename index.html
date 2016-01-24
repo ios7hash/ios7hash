@@ -14,17 +14,17 @@ h2 {font-size: 12pt; text-align: center;}
 <body>
 
 <h1>
-iOS Restrictions Passcode Cracker<br>A JavaScript implementation using CryptoJS<br>http://code.google.com/p/crypto-js/
+iOS Restrictions Passcode Cracker<br>A JavaScript implementation using <a href="http://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a>
 </h1>
 <h2>
-Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But this site works for iOS 8 as well as iOS 7! Thanks to you early adopters for letting me know!<br>
+Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But this site works for iOS 7, 8, and 9!<br>
   <br>Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
 	<br>who figured out the encryption scheme & a way to break it VERY FAST!
 	<br>This is a much slower way, but accessible by all through a simple webpage!
         <br><br>I am hosting the code on <a href="https://github.com/ios7hash/ios7hash/tree/gh-pages" target="_blank">GitHub</a> so you can help make it better!
 </h2>
 <h4><center>
-iOS7 encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite strong!
+iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite strong!
   <br>The problem is that the keyspace (0000 to 9999) is very small!
   <br>
 	<br>NOTE: Nothing is trasmitted to the server, Javascript does all the work within your browser.
@@ -46,7 +46,7 @@ iOS7 encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite s
 
 <h4>Notes:</h4>
         If this site helps you or you have questions, let me know: <b><u>ios7hash (at) derson.us</u></b><br>
-	<br>You will need access to iOS backup files or a jailbroken device to find these keys.
+	<br>You will need access to iOS backup files or a jailbroken device to find the encrypted keys.
 	<br>From a jailbroken device, you need this file: <b>com.apple.restrictionspassword.plist</b>
         <br>
         <br>On Windows or a Mac, the file can be found in an <i><u>unencrypted</u></i> iTunes backup of your device:
@@ -71,8 +71,9 @@ iOS7 encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite s
 </xmp>
 The key is: <b>M/p4734c8/SOXZnGgZot+BciAW0=</b>  and the salt is: <b>aSbUXg==</b>
 <br>You can copy & paste these keys above to watch the script work.  (hint: 0001)
+<br>The script will automatically stop & a pop-up will appear with your code.
 <br>
-<br>If you are having issues and are looking for more directions, check out a great <a href=https://nbalkota.wordpress.com/2014/04/05/recover-your-forgotten-ios-7-restrictions-pin-code/>blog by nbalkota</a>.
+<br><b>If you have questions or need additional directions, check out a great <a href=https://nbalkota.wordpress.com/2014/04/05/recover-your-forgotten-ios-7-restrictions-pin-code/>blog by nbalkota</a>.</b>
 <br>
 <br>There are many tools available to read/decrypt iTunes backups, <a href="http://www.google.com/#q=itunes+backup+software" target="_blank">search Google</a>.
 <br>My favorite is <b><a href="http://www.icopybot.com/itunes-backup-manager.htm" target="_blank">iBackupBot</a></b> because it has a built in viewer & can decrypt backups.
