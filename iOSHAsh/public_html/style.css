@@ -1,0 +1,129 @@
+header {
+    display: block;
+    min-height: 60px;
+    background: #040404;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mainContainer{
+    margin: auto;
+    width: 940px;
+}
+
+.greetings{
+    background-color: #f2f2f2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+
+
+body,div,p,input {
+    font-family: Lato, Arial, Helvetica, sans-serif; font-size: 10pt;
+}
+
+span{
+    display: inline-block;
+    border: 1px #009900 solid;
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span a {
+    text-decoration: none;
+}
+
+a {
+   color: #009900;  
+}
+
+td{
+    color: white;
+}
+
+h1 {
+    font-size: 25pt;
+    line-height: 0px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 12pt;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 10px;
+}
+
+h3{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: regular;
+}
+
+.decryptBox{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #040404;
+    color: white;
+    margin: 10 0;
+}
+#footer {
+    font-size: 8pt;
+    text-align: center;
+    padding: 0 10 10 10
+}
+
+#salt_status {
+    color: Red;
+    font-size: 8pt;
+    text-align: left
+}
+
+#passcode_status {
+    color: Red;
+    font-size: 8pt;
+    text-align: left
+}
+
+#status {
+    background-color: #009900;
+    padding: 20 10 20 10;
+    color: black;
+    text-align: center;
+}
+
+.formContainer{
+    position: relative;
+    left: 25%;
+}
+
+.btn{
+    margin: 20 20;
+    padding: 5px;
+    border: 1px white solid;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #009900;
+    color: #040404;
+}
+
+.notes{
+    background-color: #ebffeb;
+    border: 1px #009900 solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
