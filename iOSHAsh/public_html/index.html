@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Recover iOS7+ Restrictions Passcodes</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>
+iOS Restrictions Passcode Cracker<br>A JavaScript implementation using <a href="http://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a>
+</h1>
+<h2>
+Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But this site works for iOS 7, 8, and 9!<br>
+  <br>Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
+	<br>who figured out the encryption scheme & a way to break it VERY FAST!
+	<br>This is a much slower way, but accessible by all through a simple webpage!
+        <br><br>I am hosting the code on <a href="https://github.com/ios7hash/ios7hash/tree/gh-pages" target="_blank">GitHub</a> so you can help make it better!
+</h2>
+<h4><center>
+iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite strong!
+  <br>The problem is that the keyspace (0000 to 9999) is very small!
+  <br>
+	<br>NOTE: Nothing is trasmitted to the server, Javascript does all the work within your browser.
+	<br>To speed up the search, you can open multiple windows and use different starting & ending codes.
+</center></h4>
+<div></div>
+<form name="pbkdf2form">
+<table>
+<tr><td>RestrictionsPasswordKey:</td><td colspan=2><input id="key" type="text" size="33"></td></tr>
+<tr><td>RestrictionsPasswordSalt:</td><td><input id="salt" type="text" size="14"></td><td id="salt_status"></td></tr>
+<tr><td>Starting Passcode:</td><td><input id="password" value="0000" type="text" size="14"></td><td id="passcode_status"></td>
+   <td>Last Search Code:</td><td><input id="passend" value="9999" type="text" size="11"></td></tr>
+<tr><td></td><td><input type="button" value="Test Single Code" onclick="test_code()"></td>
+   <td><input type="button" value="Search for Code" onclick="find_code()"></td><td></td>
+   <td><input type="button" value="Stop, I give up" onclick="stop_searching()"></td></tr>
+</table>
+</form>
+<div id="status"></div>
+
+<h4>Notes:</h4>
+        If this site helps you or you have questions, let me know: <b><u>ios7hash (at) derson.us</u></b><br>
+	<br>You will need access to iOS backup files or a jailbroken device to find the encrypted keys.
+	<br>From a jailbroken device, you need this file: <b>com.apple.restrictionspassword.plist</b>
+        <br>
+        <br>On Windows or a Mac, the file can be found in an <i><u>unencrypted</u></i> iTunes backup of your device:
+        <br>On Windows, the file is located here: "%AppData%\Apple Computer\MobileSync\Backup\" xxxRandomxxx\
+        <br>Mac: ~/Library/Application Support/MobileSync/Backup/  where the "~" represents your Home folder. 
+        <br>-- note, if you don't see Library in your Home folder, hold Option and click the Go menu.
+        <br>The file you need has this crazy name: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
+        <br>
+        <br>If your backups are encrypted, there are other tools that can open the encrypted files...
+        <br>
+	<br>Within that file, you should find text like this:
+<xmp>  <dict>
+     <key>RestrictionsPasswordKey</key>
+     <data>
+     M/p4734c8/SOXZnGgZot+BciAW0=
+     </data>
+     <key>RestrictionsPasswordSalt</key>
+     <data>
+     aSbUXg==
+     </data>
+  </dict>
+</xmp>
+The key is: <b>M/p4734c8/SOXZnGgZot+BciAW0=</b>  and the salt is: <b>aSbUXg==</b>
+<br>You can copy & paste these keys above to watch the script work.  (hint: 0001)
+<br>The script will automatically stop & a pop-up will appear with your code.
+<br>
+<br><b>If you have questions or need additional directions, check out a great <a href="https://nbalkota.wordpress.com/2014/04/05/recover-your-forgotten-ios-7-restrictions-pin-code" target="_blank">blog by nbalkota</a>.</b>
+<br>
+<br>There are many tools available to read/decrypt iTunes backups, <a href="http://www.google.com/#q=itunes+backup+software" target="_blank">search Google</a>.
+<br>My favorite is <b><a href="http://www.icopybot.com/itunes-backup-manager.htm" target="_blank">iBackupBot</a></b> because it has a built in viewer & can decrypt backups.
+<br>
+<img src="https://cloud.githubusercontent.com/assets/7176773/2621962/a3c8f8c4-bc7f-11e3-9e35-845904385d85.jpg">
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

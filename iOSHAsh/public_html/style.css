@@ -1,0 +1,7 @@
+body,div,p,a,td,input {font-family: Arial, Helvetica, sans-serif; font-size: 10pt;}
+h1 {font-size: 14pt; text-align: center;}
+h2 {font-size: 12pt; text-align: center;}
+#footer {font-size: 8pt; text-align: center; padding: 0 10 10 10}
+#salt_status {color: Red; font-size: 8pt; text-align: left}
+#passcode_status {color: Red; font-size: 8pt; text-align: left}
+#status {background-color: #C1C1FF; padding: 10 10 10 10;}
