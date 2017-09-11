@@ -90,7 +90,7 @@ function main_func()
       salt = document.pbkdf2form.salt.value;
       key = CryptoJS.enc.Base64.parse(document.pbkdf2form.key.value).toString();
       stopnow=0;
-      document.getElementById("status").style.backgroundColor="#C1C1FF";
+      document.getElementById("status").style.backgroundColor="#009900";
       setTimeout(function() { this_object.try_code(); }, 0);
    }
    
@@ -103,7 +103,7 @@ function main_func()
       salt = document.pbkdf2form.salt.value;
       key = CryptoJS.enc.Base64.parse(document.pbkdf2form.key.value).toString();
       stopnow=1;
-      document.getElementById("status").style.backgroundColor="#C1C1FF";
+      document.getElementById("status").style.backgroundColor="#009900";
       setTimeout(function() { this_object.try_code(); }, 0);
    }
 }
