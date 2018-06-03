@@ -19,7 +19,7 @@ iOS Restrictions Passcode Cracker<br>A JavaScript implementation using <a href="
 <h2>
 Lesson Learned: I chose a bad site name fully expecting Apple to change their restrictions code hashing algorithm in the next iOS version... But this site works for iOS 7, 8, and 9!<br>
   <br>Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
-	<br>who figured out the encryption scheme & a way to break it VERY FAST!
+	<br>who figured out the encryption scheme &amp; a way to break it VERY FAST!
 	<br>This is a much slower way, but accessible by all through a simple webpage!
         <br><br>I am hosting the code on <a href="https://github.com/ios7hash/ios7hash/tree/gh-pages" target="_blank">GitHub</a> so you can help make it better!
 </h2>
@@ -27,8 +27,8 @@ Lesson Learned: I chose a bad site name fully expecting Apple to change their re
 iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite strong!
   <br>The problem is that the keyspace (0000 to 9999) is very small!
   <br>
-	<br>NOTE: Nothing is trasmitted to the server, Javascript does all the work within your browser.
-	<br>To speed up the search, you can open multiple windows and use different starting & ending codes.
+	<br>NOTE: Nothing is transmitted to the server, Javascript does all the work within your browser.
+	<br>To speed up the search, you can open multiple windows and use staggered starting &amp; ending codes.
 </center></h4>
 <div></div>
 <form name="pbkdf2form">
@@ -55,9 +55,9 @@ iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite 
         <br>-- note, if you don't see Library in your Home folder, hold Option and click the Go menu.
         <br>The file you need has this crazy name: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
         <br>
-        <br>If your backups are encrypted, there are other tools that can open the encrypted files...
+        <br>(If your backups are encrypted, there are other tools that can open the encrypted files)
         <br>
-	<br>Within that file, you should find text like this:
+	<br>If they are not encrypted, then within that file, you should find text like this:
 <xmp>  <dict>
      <key>RestrictionsPasswordKey</key>
      <data>
@@ -70,8 +70,8 @@ iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is quite 
   </dict>
 </xmp>
 The key is: <b>M/p4734c8/SOXZnGgZot+BciAW0=</b>  and the salt is: <b>aSbUXg==</b>
-<br>You can copy & paste these keys above to watch the script work.  (hint: 0001)
-<br>The script will automatically stop & a pop-up will appear with your code.
+<br>You can copy &amp; paste these keys above to watch the script work.  (hint: 0001)
+<br>The script will automatically stop &amp; a pop-up will appear with your code.
 <br>
 <br><b>If you have questions or need additional directions, check out a great <a href="https://nbalkota.wordpress.com/2014/04/05/recover-your-forgotten-ios-7-restrictions-pin-code" target="_blank">blog by nbalkota</a>.</b>
 <br>
