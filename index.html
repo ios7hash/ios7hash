@@ -19,12 +19,12 @@ iOS Restrictions Passcode Cracker
 <br>A JavaScript implementation using  <a href="http://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a>
 </h1>
 <h2>
-<br>Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
+    Special thanks to these folks: <a href="https://hashcat.net/forum/thread-2892.html" target="_blank">Hashcat</a> and <a href="https://github.com/magnumripper/JohnTheRipper/commit/3e080d833b419cb7748e92e4ded11352b692abb1" target="_blank">John the Ripper</a>
 <br>who figured out the encryption scheme &amp; a way to break it VERY FAST!
 <br>This is a much slower way, but accessible by all through a simple webpage!
 </h2>
 <h3>
-    I host this site on <a href="https://github.com/ios7hash/ios7hash/blob/gh-pages/index.html" target="_blank">GitHub</a> so you can read the code yourself and make it better!
+	  Directions in many languanges available on YouTube: <a href="https://www.youtube.com/results?search_query=ios7hash" target="_blank">https://www.youtube.com/results?search_query=ios7hash</a>
   <br>
   <br>iOS7+ encrypts the Restrictions Passcode using pbkdf2-hmac-sha1, which is very strong!
   <br>However the keyspace (0000 to 9999) is very small, so it is fast to try every code!
@@ -48,20 +48,17 @@ iOS Restrictions Passcode Cracker
 
 <h4>Notes:</h4>
     I love hearing when the site has helped others! <b><u>ios7hash (at) derson.us</u></b>
-<br>A few generous folks have dontated through: <a href="https://paypal.me/ioshash" target="_blank">Paypal</a> or <a href="https://venmo.com/ios7hash" target="_blank">Venmo</a>
+<br>A few generous people have <b>said thanks</b> through: <a href="https://paypal.me/ioshash" target="_blank"><b>Paypal</b></a>  or  <a href="https://venmo.com/ios7hash" target="_blank"><b>Venmo</b></a>
 <br>
-<br>You will need access to iOS backup files or a jailbroken device to find the encrypted keys.
+<br>You need access to unecrypted iOS backup files or a jailbroken device to find the keys.
 <br>From a jailbroken device, you need this file: <b>com.apple.restrictionspassword.plist</b>
 <br>
-<br>On Windows or a Mac, the file can be found in an <i><u>unencrypted</u></i> iTunes backup of your device:
-<br>On Windows, the file is located here: "%AppData%\Apple Computer\MobileSync\Backup\" xxxRandomxxx\ 39\
-<br>Mac: ~/Library/Application Support/MobileSync/Backup/  where the "~" represents your Home folder. 
+<br>On Windows or a Mac, the file can be found in an <i><u>unencrypted</u></i>  iTunes backup:
+<br>On Windows, the file is located here: <b>"%AppData%\Apple Computer\MobileSync\Backup\" xxxRandomxxx\ 39\</b>
+<br>Mac: <b>~/Library/Application Support/MobileSync/Backup/</b>  where the "~" represents your Home folder. 
 <br>-- note, if you don't see Library in your Home folder, hold Option and click the Go menu.
-<br>The file you need has this crazy name: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
-<br>If you don't see english text, then the file is encrypted.
 <br>
-<br>(If your backups are encrypted, there are other tools that can open the encrypted files)
-<br><a href="http://pinfinder.net" target="_blank">PinFinder</a> is a recovery solution using downloaded code that can read encrypted files.
+<br>The file you need has this crazy name: <b>398bc9c2aeeab4cb0c12ada0f52eea12cf14f40b</b>
 <br>
 <br>If the backup is not encrypted, within that file, you should see text like this:
 <xmp>
@@ -77,12 +74,24 @@ iOS Restrictions Passcode Cracker
   </dict>
 </xmp>
 The key is: <b>FklNcq4P3mJYSNjDFWvv2ei2+uE=</b>  and the salt is: <b>aSbUXg==</b>
+<br>
 <br>You can copy &amp; paste the key and salt above to watch the webpage work. (hint: 0020)
 <br>The webpage will automatically stop &amp; a pop-up will appear with your restrictions code when finished.
 <br>
 <br><b>If you have questions or need additional directions, check out a great <a href="https://nbalkota.wordpress.com/2014/04/05/recover-your-forgotten-ios-7-restrictions-pin-code" target="_blank">blog by nbalkota</a>.</b>
 <br>
-<br>There are many tools available to read/decrypt iTunes backups, <a href="http://www.google.com/#q=itunes+backup+software" target="_blank">search Google</a>.
+<br><b>I host this site on <a href="https://github.com/ios7hash/ios7hash/blob/gh-pages/index.html" target="_blank">GitHub</a> so you can read the code yourself.</b>
+<br>
+<br>
+<br>To create an unecrypted backup through iTunes, uncheck <b>Encrypt local backup</b>
+<br>
+<img src="https://user-images.githubusercontent.com/7176773/40896427-0ce9ba7c-6772-11e8-8e73-98bba6309854.jpg">
+<br>
+<br><b>You must know the backup password to create an unencrypted backup or decrypt an existing backup.</b>
+<br>There are tools you can download to directly read the encrypted files, but you always need the backup password!
+<br><a href="http://pinfinder.net" target="_blank"><b>PinFinder</b></a> is a free and fast recovery solution.
+<br>
+<br>There are many other tools available to read/decrypt iTunes backups, <a href="http://www.google.com/#q=itunes+backup+software" target="_blank">search Google</a>.
 <br>My favorite is <b><a href="http://www.icopybot.com/itunes-backup-manager.htm" target="_blank">iBackupBot</a></b> because it has a built in viewer & can decrypt backups.
 <br>
 <img src="https://cloud.githubusercontent.com/assets/7176773/2621962/a3c8f8c4-bc7f-11e3-9e35-845904385d85.jpg">
